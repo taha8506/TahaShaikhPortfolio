@@ -31,8 +31,6 @@ function PageTransitions() {
 
             const element = document.getElementById(id);
             element.classList.add('active');
-            // let anaylsisSec = document.getElementById('.analysis');
-            // anaylsisSec.classList.add('active');
 
         }
     })
