@@ -203,7 +203,6 @@ section {
   pointer-events: none;
 }
 
-
 /*Header-content*/
 .header-content {
   display: -ms-grid;
@@ -238,7 +237,6 @@ section {
 }
 
 .header-content .left-header .image {
-
   margin-left: 10rem;
 
 }
