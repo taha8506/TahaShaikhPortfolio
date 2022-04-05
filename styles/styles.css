@@ -12,9 +12,6 @@
   --color-secondary: #112d32;
   --color-white: #FFFFFF;
   --color-black: #000;
-  /* --color-grey0: #f8f8f8;
-  --color-grey-1: #dbe1e8;
-  --color-grey-2: #ffffff; */
   --color-grey-3: #6c7983;
   --color-grey-4: #254e68;
   --color-grey-5: #2a2e35;
@@ -369,7 +366,6 @@ section {
 .process-container {
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (1fr)[2]; */
   grid-template-columns: repeat(1, 1fr);
   padding-top: 3.5rem;
   padding-bottom: 5rem;
