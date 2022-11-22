@@ -7,16 +7,21 @@
 }
 
 :root {
-  --color-primary: #88bdbc;
-  --color-secondary: #112d32;
-  --color-white: #FFFFFF;
+  --color-primary: #d6d6d6;
+  --color-secondary: #006296;
+  --color-white: #30353a;
   --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #222222;
+  --color-grey-2: #a4a9ad;
   --color-grey-3: #6c7983;
-  --color-grey-4: #254e68;
-  --color-grey-5: #2a2e35;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
   --br-sm-2: 0.875rem;
   --box-shadow-1: 0 0.1875rem 0.9375rem rgba(0, 0, 0, .3);
 }
+
 
 
 body {
@@ -70,6 +75,69 @@ section {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 70%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper .static-txt {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+
+}
+
+.dynamic-txts li {
+  list-style: none;
+  color: #d6d6d6;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #006296;
+  border-left: 2px solid #d6d6d6;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+
+  100% {
+    left: 0;
+  }
 }
 
 .section {
@@ -354,6 +422,7 @@ section {
   color: var(--color-grey-1);
   letter-spacing: 0.125rem;
   padding: 2rem;
+  margin-top: 1rem;
 }
 
 
@@ -437,7 +506,7 @@ section {
   display: -ms-grid;
   display: grid;
   /* -ms-grid-columns: (1fr)[3]; */
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin-top: 3rem;
 }
@@ -810,6 +879,12 @@ section {
   header {
     padding: 0 !important;
   }
+
+  .wrapper {
+    display: none;
+  }
+
+
 
   .header-content {
 
